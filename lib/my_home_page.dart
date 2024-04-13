@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -23,8 +24,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: const Center(
-        child: Text('GetX Height Width')
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              color: Colors.green,
+              height: Get.height * 0.2,
+              width: Get.width * 0.9,
+            ),
+            const SizedBox(height: 10,),
+            Container(
+              color: Colors.red,
+              height: Get.height * 0.6,
+              width: Get.width * 0.2,
+            ),
+          ],
+        ),
       ),
     );
   }
